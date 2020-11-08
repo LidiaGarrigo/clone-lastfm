@@ -1,30 +1,31 @@
-/* Colores:
-   $color-primary:  #222
-   $color-secondary: rgba(110, 69, 51, 1);
-   $color-focus-menu: #B90000; 
-   $color-background: #fff;
-   $color-list-odd: #f2f2f2;
-   
-*/
+@import "./reset.scss";
 
-/* Imágenes:
-logo: https://www.last.fm/static/images/logo_static_mob.0798d7258e3d.png
+
+$color-primary:  #222;
+$color-secondary: rgba(110, 69, 51, 1);
+$color-focus-menu: #B90000; 
+$color-background: #fff;
+$color-list-odd: #f2f2f2;
+$fuente-texto: Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+
+/* Imágenes: */
+
+/* logo: https://www.last.fm/static/images/logo_static_mob.0798d7258e3d.png
 rock: https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg
 hip-hop: https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg
 indie:https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg
 jazz:https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg
-reggae: https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg
-*/
+reggae: https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg */
 
-/* Filtros: 
 
-rock:   sepia(90%);
-hip-hop:contrast(200%);
-indie:  grayscale(50%);
-jazz:   hue-rotate(90deg);
-reggae: saturate(10%);
+/* Filtros:  */
 
-*/
+$rock:  sepia(90%);
+$hip-hop:contrast(200%);
+$indie:  grayscale(50%);
+$jazz:   hue-rotate(90deg);
+$reggae: saturate(10%);
+
 
 /* Fuente:
     font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
@@ -34,3 +35,202 @@ reggae: saturate(10%);
 /* Utiliza  la propiedad counter-increment: step-counter; para pintar el número de la canción
  */
 
+
+body{
+    font-family: $fuente-texto;
+
+    header{
+    background-color: $color-primary;
+    margin: 5px;
+    padding: 20px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .imagenes{
+            display: flex;
+            justify-content: space-around;   
+            align-items: center;
+            width: 45%;
+            height: 100px;
+            margin: 10px 0px 10px 0px;
+            button:hover{
+                cursor: pointer;
+            }
+            .rock{
+                width: 100px;
+                height: 100%;
+                .boton_rock{
+                    width: 100%;
+                    height: 100%;
+                    filter: $rock;
+                    background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg")no-repeat;
+                    background-size: 100% 100%;
+                    border: none;
+                    color: $color-background;
+                    text-align: center;
+                    font-weight: bold;
+                    border-style: none;
+                }
+            }
+            .hip-hop{
+                width: 100px;
+                height: 100%;
+                .boton_hiphop{
+                    width: 100%;
+                    height: 100%;
+                    filter: $hip-hop;
+                    background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg")
+                    no-repeat;
+                    background-size: 100% 100%;
+                    border: none;
+                    color: $color-background;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+            .indie{
+                width: 100px;
+                height: 100%;
+                .boton_indie{
+                    width: 100%;
+                    height: 100%;
+                    filter: $indie;
+                    background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg")
+                    no-repeat;
+                    background-size: 100% 100%;
+                    border: none;
+                    color: $color-background;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+            .jazz{
+                width: 100px;
+                height: 100%;
+                .boton_jazz{
+                    width: 100%;
+                    height: 100%;
+                    filter: $jazz;
+                    background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg")
+                    no-repeat;
+                    background-size: 100% 100%;
+                    border: none;
+                    color: $color-background;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+            .reggae{
+                width: 100px;
+                height: 100%;
+                .boton_reggae{
+                    width: 100%;
+                    height: 100%;
+                    filter: $reggae;
+                    background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg")
+                    no-repeat;
+                    background-size: 100% 100%;
+                    border: none;
+                    color: $color-background;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+            
+        }
+        .listas{
+            display: flex;
+            justify-content: space-between;
+            justify-self: center;
+            margin: 10px 0px 10px 0px;
+            width: 23%;
+            button:hover{
+                cursor: pointer;
+            }
+            button{
+                font-size: 15px;
+            }
+            .overview{
+                border: none;
+                background-color: $color-background;
+                color: $color-primary;
+                font-weight: bold;
+            }
+            .topten{
+                border: none;
+                background-color: $color-background;
+                color: $color-primary;
+                font-weight: bold;
+            }
+            .biggest{
+                border: none;
+                background-color: $color-background;
+                color: $color-primary;
+                font-weight: bold;
+            }
+            #clicado{
+                color: $color-focus-menu;
+            }
+        }
+    }
+    main{
+        width: 100%;
+        
+        h1{
+            font-size: 23px;
+            font-weight: bold;
+            margin: 10px 0px 10px 0px;
+            padding: 10px;
+        }
+            ul{
+                display: flex;
+                flex-flow: column;
+                width: 100%;
+                margin-left: 5px;
+                li:nth-child(odd){
+                    background-color: $color-list-odd;
+                }
+                li {
+                    width: 100%;
+                    padding: 0.3em 0em;
+                    display: flex;
+                    justify-content: space-between;
+                    justify-self: flex-start;
+                    flex-flow: row;
+                    list-style-type: none;
+                    align-items: center;
+                    .titulo_grupo{
+                        display: flex;
+                        flex-flow: row;
+                        justify-content: flex-start;
+                        width: 40%;
+                        align-items: center;
+                        
+                        p{
+                            margin: 0em 0.5em;
+                            font-family:$fuente-texto;
+
+                        }
+                        .group-name{
+                            margin: 0em 2em 0em 0em;
+                            font-family:$fuente-texto;
+                        }
+                        .song-title{
+                            font-family:$fuente-texto;
+                            font-weight: bold;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+        }
+    }
+}

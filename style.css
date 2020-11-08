@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Imágenes: */
+/* logo: https://www.last.fm/static/images/logo_static_mob.0798d7258e3d.png
+rock: https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg
+hip-hop: https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg
+indie:https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg
+jazz:https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg
+reggae: https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg */
+/* Filtros:  */
+/* Fuente:
+    font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+
+*/
+/* Utiliza  la propiedad counter-increment: step-counter; para pintar el número de la canción
+ */
+body {
+  font-family: Open Sans, Lucida Grande, Helvetica Neue, Helvetica, Arial, Sans-serif;
+}
+body header {
+  background-color: #222;
+  margin: 5px;
+  padding: 20px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body nav .imagenes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 45%;
+  height: 100px;
+  margin: 10px 0px 10px 0px;
+}
+body nav .imagenes button:hover {
+  cursor: pointer;
+}
+body nav .imagenes .rock {
+  width: 100px;
+  height: 100%;
+}
+body nav .imagenes .rock .boton_rock {
+  width: 100%;
+  height: 100%;
+  filter: sepia(90%);
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  border-style: none;
+}
+body nav .imagenes .hip-hop {
+  width: 100px;
+  height: 100%;
+}
+body nav .imagenes .hip-hop .boton_hiphop {
+  width: 100%;
+  height: 100%;
+  filter: contrast(200%);
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+body nav .imagenes .indie {
+  width: 100px;
+  height: 100%;
+}
+body nav .imagenes .indie .boton_indie {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(50%);
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+body nav .imagenes .jazz {
+  width: 100px;
+  height: 100%;
+}
+body nav .imagenes .jazz .boton_jazz {
+  width: 100%;
+  height: 100%;
+  filter: hue-rotate(90deg);
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+body nav .imagenes .reggae {
+  width: 100px;
+  height: 100%;
+}
+body nav .imagenes .reggae .boton_reggae {
+  width: 100%;
+  height: 100%;
+  filter: saturate(10%);
+  background: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg") no-repeat;
+  background-size: 100% 100%;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+body nav .listas {
+  display: flex;
+  justify-content: space-between;
+  justify-self: center;
+  margin: 10px 0px 10px 0px;
+  width: 23%;
+}
+body nav .listas button:hover {
+  cursor: pointer;
+}
+body nav .listas button {
+  font-size: 15px;
+}
+body nav .listas .overview {
+  border: none;
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+}
+body nav .listas .topten {
+  border: none;
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+}
+body nav .listas .biggest {
+  border: none;
+  background-color: #fff;
+  color: #222;
+  font-weight: bold;
+}
+body nav .listas #clicado {
+  color: #B90000;
+}
+body main {
+  width: 100%;
+}
+body main h1 {
+  font-size: 23px;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+  padding: 10px;
+}
+body main ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-left: 5px;
+}
+body main ul li:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+body main ul li {
+  width: 100%;
+  padding: 0.3em 0em;
+  display: flex;
+  justify-content: space-between;
+  justify-self: flex-start;
+  flex-flow: row;
+  list-style-type: none;
+  align-items: center;
+}
+body main ul li .titulo_grupo {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  width: 40%;
+  align-items: center;
+}
+body main ul li .titulo_grupo p {
+  margin: 0em 0.5em;
+  font-family: Open Sans, Lucida Grande, Helvetica Neue, Helvetica, Arial, Sans-serif;
+}
+body main ul li .titulo_grupo .group-name {
+  margin: 0em 2em 0em 0em;
+  font-family: Open Sans, Lucida Grande, Helvetica Neue, Helvetica, Arial, Sans-serif;
+}
+body main ul li .titulo_grupo .song-title {
+  font-family: Open Sans, Lucida Grande, Helvetica Neue, Helvetica, Arial, Sans-serif;
+  font-weight: bold;
+}
+body main ul li .titulo_grupo a {
+  text-decoration: none;
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
