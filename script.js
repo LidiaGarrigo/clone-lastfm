@@ -24,7 +24,7 @@ class Song {
     setListeners(listeners) {
     }
     getNewElement(group, url, title, listeners) {
-        /* La clase tendrá un método getNewElement() que devolverá el elemento de lista <li> preparado para ser añadido al elemento <div class="lista"> */
+
     }
 
 }
